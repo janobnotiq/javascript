@@ -1,4 +1,4 @@
-#rek{
+/* #rek{
     font-size: x-large;
     font-weight: bold;
 }
@@ -40,4 +40,8 @@ label {
 
 #submitbnt:hover {
     background-color: rgba(9, 184, 9, 0.719);
+} */
+
+body{
+    background-color: tomato;
 }

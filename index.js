@@ -21,18 +21,55 @@
 
 
 
-document.getElementById("submitbnt").onclick = function(){
-    let yigindi = 0;
-    let son;
+// document.getElementById("submitbnt").onclick = function(){
+//     let yigindi = 0;
+//     let son;
 
-    son = document.getElementById("raqam").value
-    son = Number(son)
+//     son = document.getElementById("raqam").value
+//     son = Number(son)
 
-    while (son > 0){
-        yigindi += son;
-        son--;
+//     for(let i = 1; i <= son; i++){
+//         // if (i % 2 !== 0){
+//         //     console.log(i)
+//         // } else {
+//         //     yigindi += i;
+//         // }
+//             yigindi += i;
+
+//     }
+
+//     document.getElementById("response").textContent = yigindi
+// }
+
+// ---------------------------------------------------------------------------
+
+let secret = Math.floor((Math.random()*100));
+let attempts = 0;
+let running = true;
+let option;
+
+while(running){
+    option = window.prompt(`1 dan 100 gacha bo'lgan qaysidir son bu, qani top-chi`)
+    option = Number(option)
+
+    if (isNaN(option)){
+        window.alert(`Son kiriting`)
+    } else if (option < 1 || option > 100){
+        window.alert(`1 dan 100 gacha ukaxon!`)
+    } else if (option > secret) {
+        window.alert("Bundan kichik")
+        attempts++;
+    } else if (option < secret){
+        window.alert(`Bundan katta`)
+        attempts++
+    } else{
+        console.log(option)
     }
 
-    document.getElementById("response").textContent = yigindi
+    if (option === secret){
+        attempts++;
+        window.alert(`Siz ${attempts} urunishda bu son ${secret} ekanini topdingiz` )
+        running = false;
+        document.getElementById("res").textContent = "Qale"
+    }
 }
-
