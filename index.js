@@ -61,3 +61,37 @@
 
 // window.alert(message);
 
+// let season;
+
+// season = window.prompt("Enter season")
+
+// switch(season){
+//     case "qish":
+//         console.log("Winter")
+//         break;
+//     case "bahor":
+//         console.log("Spring")
+//         break;
+//     case "yoz":
+//         console.log("Summer")
+//         break;
+//     case "kuz":
+//         console.log("Autumn")
+//         break;
+// }
+
+// let narx,tax;
+
+// narx = window.prompt(`Narxni kiriting: `)
+// narx = Number(narx)
+
+// tax = narx*0.12
+
+// window.alert(`Soliq: ${tax}`)
+let paymentAmount = document.getElementById("amount").textContent
+
+
+
+document.getElementById("pay").onclick = function(){
+    document.getElementById("result").textContent = paymentAmount
+}
