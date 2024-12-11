@@ -1,0 +1,43 @@
+#rek{
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(205, 134, 63, 0.838);
+    width: 50%;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+label {
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#raqam{
+    width: 120px;
+    height: 30px;
+    border: none;
+    border-radius: 7px;
+}
+
+#submitbnt{
+    margin-top: 10px;
+    padding: 14px;
+    font-size: 15px;
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+    transition: background-color 0.25s;
+}
+
+#submitbnt:hover {
+    background-color: rgba(9, 184, 9, 0.719);
+}

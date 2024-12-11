@@ -1,97 +1,38 @@
-// // console.log(`Assalomu alaykum!`)
+// // We go to the gym if time is 8 and weather is good
 
-// // window.alert(`Tabriklaymiz, siz bugun kutibxonaga keldingiz!`)
+// let time, isWeatherGood;
 
-// // document.getElementById("hello").textContent = "Hello";
-// // document.getElementById("test").textContent = "test";
+// time = window.prompt(`Time:`)
+// isWeatherGood = window.prompt(`Weather good? (yes/no):`)
 
-// // let me = "go";
-// // let something = typeof me;
-
-// // console.log(`Let me ${me}`);
-// // console.log(`You can ${me}`);
-// // console.log(typeof me);
-// // console.log(typeof something);
-
-// // let firstName;
-
-// // firstName = window.prompt(`Enter your name:`)
-
-// // console.log(`Your name is ${firstName}`)
-
-// // let ad;
-// // ad = window.prompt(`Nimadir yoz`);
-
-// // document.getElementById("banner").textContent = ad;
-
-// // document.getElementById("go").onclick = function(){
-// //     ad = document.getElementById("yourad").value
-// //     document.getElementById("banner").textContent = ad;
-// // }
-
-// // const Amount = document.getElementById("amount");
-// // console.log(Amount)
-// const checked = document.getElementById("checked");
-// const uzcard = document.getElementById("Uzcard");
-// const humo = document.getElementById("Humo");
-// const visa = document.getElementById("Visa");
-// let result = document.getElementById("")
-// document.getElementById("pay").onclick = function(){
-//     if (uzcard.checked){
-//         window.alert("you are paying using uzcard")
-//     } else if (humo.checked){
-//         window.alert("you are paying using humo")
-//     } else if (visa.checked){
-//         window.alert("you are paying using visa")
-//     } else{
-//         window.alert("Other payment method")
-//     }
+// if (isWeatherGood.toLocaleLowerCase() == "yes"){
+//     isWeatherGood = true
+// } else {
+//     isWeatherGood = false
 // }
 
-// // let tax;
 
-// // pay.addEventListener("click",evt=>{
-// //     evt.preventDefault()
-// //     console.log(Amount.value)
-// // })
-
-// let age = 16;
-
-// let message = age >= 16 ? "You have a passport" : "You don't have a passport"
-
-// window.alert(message);
-
-// let season;
-
-// season = window.prompt("Enter season")
-
-// switch(season){
-//     case "qish":
-//         console.log("Winter")
-//         break;
-//     case "bahor":
-//         console.log("Spring")
-//         break;
-//     case "yoz":
-//         console.log("Summer")
-//         break;
-//     case "kuz":
-//         console.log("Autumn")
-//         break;
+// if (time == 8 && isWeatherGood){
+//     window.alert(`Let's go to the gym`)
+// } else {
+//     window.alert(`We don't go`)
 // }
-
-// let narx,tax;
-
-// narx = window.prompt(`Narxni kiriting: `)
-// narx = Number(narx)
-
-// tax = narx*0.12
-
-// window.alert(`Soliq: ${tax}`)
-let paymentAmount = document.getElementById("amount").textContent
+// ---------------------------------------------------------------------------------
 
 
 
-document.getElementById("pay").onclick = function(){
-    document.getElementById("result").textContent = paymentAmount
+document.getElementById("submitbnt").onclick = function(){
+    let yigindi = 0;
+    let son;
+
+    son = document.getElementById("raqam").value
+    son = Number(son)
+
+    while (son > 0){
+        yigindi += son;
+        son--;
+    }
+
+    document.getElementById("response").textContent = yigindi
 }
+
